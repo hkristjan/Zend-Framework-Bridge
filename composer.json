@@ -1,5 +1,5 @@
 {
-    "name": "php-di/zend-framework-bridge",
+    "name": "hkristjan/zend-framework-bridge",
     "type": "library",
     "description": "Integrates PHP-DI to Zend Framework",
     "homepage": "https://github.com/PHP-DI/Zend-Framework-Bridge",
@@ -9,8 +9,7 @@
         "php-di/php-di": "^5.0",
         "acclimate/container": "^1.0",
         "doctrine/annotations": "^1.0",
-        "doctrine/cache": "^1.0",
-        "roave/security-advisories": "dev-master"
+        "doctrine/cache": "^1.0"
     },
 
     "require-dev": {
