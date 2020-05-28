@@ -75,7 +75,13 @@ final class PHPDIAbstractFactory implements AbstractFactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return $this->getContainer($container)->get($requestedName);
+        $service = $this->getContainer($container)->get($requestedName);
+
+        if (method_exists($service, 'setServiceLocator')) {
+            $service->setServiceLocator($container);
+        }
+
+        return $service;
     }
 
     /**
